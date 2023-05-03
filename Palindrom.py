@@ -1,3 +1,13 @@
-a = input("Введите слово: ").lower()
-msg = "палиндром" if a == a[::-1] else "не палиндром"
-print(msg)
+# объявление функции
+def is_palindrome(text):
+    symbol = [',', '.', '!', '?', '-', ' ']
+    for x in symbol:
+        text = text.replace(x, '')
+    text = text.lower()
+    return text == text[::-1]
+
+# считываем данные
+txt = input()
+
+# вызываем функцию
+print(is_palindrome(txt))
